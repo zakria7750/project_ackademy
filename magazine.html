@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مجلة الأكاديمية - أكاديمية المعرفة الدولية</title>
-    <meta name="description" content="مجلة الأكاديمية - أحدث البحوث والدراسات في التنمية البشرية والتطوير المعرفي">
+    <title>مجلة وعي للدراسات والبحوث العلمية - أكاديمية المعرفة الدولية</title>
+    <meta name="description" content="مجلة وعي للدراسات والبحوث العلمية - منصة أكاديمية محكّمة للنشر العلمي من أكاديمية المعرفة الدولية.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,30 +24,511 @@
         .text-golden { color: var(--golden); }
         .border-golden { border-color: var(--golden); }
         .hero-gradient { background: linear-gradient(135deg, var(--primary-blue), #1E3A8A); }
-        .back-btn { position: fixed; top: 1rem; left: 1rem; z-index: 1000; }
+        .subnav-blur { backdrop-filter: blur(6px); }
     </style>
     
     <script>
-        tailwind.config = { theme: { extend: { colors: { 'primary': '#001f3f', 'golden': '#FFD700' }, fontFamily: { 'cairo': ['Cairo', 'sans-serif'] } } } }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'primary': '#001f3f', 'golden': '#FFD700' },
+                    fontFamily: { 'cairo': ['Cairo', 'sans-serif'] }
+                }
+            }
+        }
     </script>
 </head>
 <body class="bg-gray-50" dir="rtl">
-    <!-- Back Button -->
-    <a href="index.html" class="back-btn inline-flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg shadow hover:bg-black transition-colors">
-        <i class="fas fa-home"></i>
-        <span>الرئيسية</span>
-    </a>
+    <!-- Top Bar / Back -->
+    <div class="fixed top-0 right-0 left-0 z-40 bg-white/90 subnav-blur border-b">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:text-golden font-semibold">
+                <i class="fas fa-home"></i>
+                <span>العودة للرئيسية</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-4 text-sm text-gray-700">
+                <a href="#cover" class="hover:text-golden">الغلاف</a>
+                <a href="#inner-front" class="hover:text-golden">الصفحة الداخلية</a>
+                <a href="#editorial-board" class="hover:text-golden">هيئة التحرير</a>
+                <a href="#author-guidelines" class="hover:text-golden">تعليمات النشر</a>
+                <a href="#toc" class="hover:text-golden">الفهرس</a>
+                <a href="#current-issue" class="hover:text-golden">الأبحاث الحالية</a>
+                <a href="#articles" class="hover:text-golden">ركن المقالات</a>
+                <a href="#news" class="hover:text-golden">الأخبار والأنشطة</a>
+                <a href="#back-cover" class="hover:text-golden">الغلاف الخلفي</a>
+            </nav>
+        </div>
+    </div>
 
-    <!-- Magazine Content -->
-    <main class="pt-20">
-        <div id="mainContent"></div>
+    <main class="pt-20 md:pt-24">
+        <!-- 1) الغلاف -->
+        <section id="cover" class="relative hero-gradient text-white">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-golden text-primary w-12 h-12 rounded-full flex items-center justify-center shadow">
+                                <i class="fas fa-book-open text-2xl"></i>
+                            </div>
+                            <div>
+                                <h1 class="text-2xl md:text-3xl font-bold">مجلة وعي للدراسات والبحوث العلمية</h1>
+                                <p class="text-golden/90 text-sm">الصادرة عن أكاديمية المعرفة الدولية</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white/10 rounded-lg p-4 border border-white/20">
+                                <p class="text-sm text-gray-200">بيانات العدد</p>
+                                <p class="font-semibold">العدد رقم 1 – السنة 2025 – يناير 2025</p>
+                            </div>
+                            <div class="bg-white/10 rounded-lg p-4 border border-white/20">
+                                <p class="text-sm text-gray-200">التصنيف الدولي</p>
+                                <p class="font-semibold">ISSN (Online): 0000-0000 — ISSN (Print): 0000-0000</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a href="#current-issue" class="px-5 py-3 bg-golden text-primary rounded-lg font-semibold hover:bg-yellow-400 transition">تصفح العدد</a>
+                            <a href="#" class="px-5 py-3 bg-white/10 border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition">تحميل العدد PDF</a>
+                            <a href="#previous-issues" class="px-5 py-3 bg-white/10 border border-white/30 rounded-lg font-semibold hover:bg-white/20 transition">الأعداد السابقة</a>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="aspect-[16/10] rounded-xl overflow-hidden shadow-2xl border border-white/20">
+                            <div class="w-full h-full bg-cover bg-center" style="background-image: radial-gradient(circle at 30% 20%, rgba(255,215,0,0.25), transparent 40%), linear-gradient(135deg, rgba(0,0,0,0.15), rgba(255,255,255,0.05)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop');"></div>
+                        </div>
+                        <div class="mt-4 text-sm text-gray-200 flex items-center gap-2">
+                            <i class="far fa-image"></i>
+                            <span>صورة تعبيرية لهوية المجلة ومجالها</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) الصفحة الداخلية الأولى -->
+        <section id="inner-front" class="py-14">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">عن المجلة ورسالتها</h2>
+                    <p class="text-gray-600 mt-2">تعريف مختصر، الرسالة، الأهداف، نطاق النشر، والاتصال</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-bullseye text-golden"></i>
+                            <h3 class="font-semibold text-primary">التعريف والرسالة والأهداف</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            مجلة علمية محكّمة تُعنى بنشر البحوث والدراسات الأصيلة في مجالات العلوم الإنسانية والاجتماعية وغيرها،
+                            وتسعى إلى الإسهام في بناء المعرفة وترسيخ المنهجية العلمية عبر نشر أعمال ذات جودة عالية.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-layer-group text-golden"></i>
+                            <h3 class="font-semibold text-primary">مجال النشر والتخصصات</h3>
+                        </div>
+                        <ul class="list-disc pr-5 text-gray-700 space-y-1">
+                            <li>العلوم الإنسانية والاجتماعية</li>
+                            <li>الإدارة والتطوير والتنمية</li>
+                            <li>التربية والتعليم وطرائق التدريس</li>
+                            <li>الدراسات القرآنية واللغوية</li>
+                            <li>مجالات أخرى ذات صلة</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-info-circle text-golden"></i>
+                            <h3 class="font-semibold text-primary">بيانات النشر والتواصل</h3>
+                        </div>
+                        <ul class="text-gray-700 space-y-2">
+                            <li><span class="font-semibold">لغات النشر:</span> العربية، الإنجليزية</li>
+                            <li><span class="font-semibold">الدورية:</span> ربع سنوية</li>
+                            <li><span class="font-semibold">البريد:</span> journal@knowledge-academy.edu</li>
+                            <li><span class="font-semibold">الموقع:</span> www.knowledge-academy.edu/journal</li>
+                            <li><span class="font-semibold">الهاتف:</span> +966 11 234 5678</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3) هيئة التحرير -->
+        <section id="editorial-board" class="py-14 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">هيئة التحرير</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <h3 class="font-semibold text-primary mb-2">رئيس التحرير</h3>
+                        <p class="text-gray-700">د. اسم رئيس التحرير – أستاذ مشارك، التخصص، الدولة</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <h3 class="font-semibold text-primary mb-2">نائب رئيس التحرير</h3>
+                        <p class="text-gray-700">د. اسم نائب الرئيس – أستاذ مساعد، التخصص، الدولة</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow border">
+                        <h3 class="font-semibold text-primary mb-2">مدير التحرير</h3>
+                        <p class="text-gray-700">أ. اسم مدير التحرير – ماجستير، التخصص، الدولة</p>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold text-primary mb-4">أعضاء هيئة التحرير</h3>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <!-- Members placeholders -->
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم عضو 1</p>
+                            <p class="text-sm text-gray-600">دكتوراه، التخصص – الدولة</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم عضو 2</p>
+                            <p class="text-sm text-gray-600">دكتوراه، التخصص – الدولة</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم عضو 3</p>
+                            <p class="text-sm text-gray-600">دكتوراه، التخصص – الدولة</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم عضو 4</p>
+                            <p class="text-sm text-gray-600">دكتوراه، التخصص – الدولة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-primary mb-4">اللجنة العلمية / هيئة المراجعة (المحكّمون)</h3>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم محكّم 1</p>
+                            <p class="text-sm text-gray-600">أستاذ مشارك – الدولة</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم محكّم 2</p>
+                            <p class="text-sm text-gray-600">أستاذ مساعد – الدولة</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم محكّم 3</p>
+                            <p class="text-sm text-gray-600">باحث – الدولة</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4 shadow border">
+                            <p class="font-semibold">د. اسم محكّم 4</p>
+                            <p class="text-sm text-gray-600">أستاذ – الدولة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4) تعليمات النشر -->
+        <section id="author-guidelines" class="py-14">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">تعليمات النشر</h2>
+                    <p class="text-gray-600 mt-2">يرجى الالتزام بالضوابط والمعايير التالية قبل الإرسال</p>
+                </div>
+
+                <div class="space-y-3 max-w-4xl mx-auto">
+                    <details class="bg-white rounded-xl p-5 shadow border group" open>
+                        <summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+                            شروط قبول الأبحاث والمقالات
+                            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <ul class="list-disc pr-5 mt-3 text-gray-700 space-y-1">
+                            <li>أصالة البحث وسلامته من الاستلال العلمي.</li>
+                            <li>الالتزام بالمنهجية العلمية ووضوح problem statement.</li>
+                            <li>سلامة اللغة ودقة التوثيق.</li>
+                        </ul>
+                    </details>
+
+                    <details class="bg-white rounded-xl p-5 shadow border group">
+                        <summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+                            معايير وضوابط الكتابة الأكاديمية
+                            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <ul class="list-disc pr-5 mt-3 text-gray-700 space-y-1">
+                            <li>عدد الكلمات المقترح: 5000–8000 كلمة.</li>
+                            <li>ملخص عربي/إنجليزي: 150–250 كلمة مع كلمات مفتاحية.</li>
+                            <li>أسلوب التوثيق: APA/Chicago حسب المجال.</li>
+                            <li>تنسيق الجداول والأشكال وحقوق استخدامها.</li>
+                        </ul>
+                    </details>
+
+                    <details class="bg-white rounded-xl p-5 shadow border group">
+                        <summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+                            إجراءات التحكيم العلمي
+                            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-gray-700">تحكيم مزدوج التعمية يمر بمراحل الفحص الأولي، الإحالة للمحكّمين، التعديلات، والقرار النهائي خلال مدة تقديرية من 4–8 أسابيع.</p>
+                    </details>
+
+                    <details class="bg-white rounded-xl p-5 shadow border group">
+                        <summary class="cursor-pointer font-semibold text-primary flex items-center justify-between">
+                            السياسات (السرية، حقوق النشر، الاستلال، الرسوم)
+                            <i class="fas fa-chevron-down text-gray-500 group-open:rotate-180 transition"></i>
+                        </summary>
+                        <p class="mt-3 text-gray-700">تلتزم المجلة بسياسة سرية التحكيم، واحترام حقوق النشر، وعدم قبول البحوث ذات نسب استلال مرتفعة. الرسوم – إن وجدت – تعلن عبر الموقع.</p>
+                    </details>
+
+                    <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-xl text-sm text-yellow-800">
+                        تنبيه: إرسال البحث يعني موافقة الباحث على سياسة المجلة وإجراءات التحكيم وميثاق أخلاقيات النشر.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) فهرس المحتويات -->
+        <section id="toc" class="py-14 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">فهرس المحتويات</h2>
+                </div>
+
+                <div class="overflow-x-auto bg-white rounded-xl shadow border">
+                    <table class="min-w-full text-right">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th class="px-4 py-3">رقم الصفحة</th>
+                                <th class="px-4 py-3">عنوان البحث/المقال</th>
+                                <th class="px-4 py-3">المؤلف/المؤلفون</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr>
+                                <td class="px-4 py-3 text-gray-700">5</td>
+                                <td class="px-4 py-3 font-semibold">عنوان بحث تجريبي 1</td>
+                                <td class="px-4 py-3 text-gray-600">د. اسم الباحث</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-gray-700">21</td>
+                                <td class="px-4 py-3 font-semibold">عنوان بحث تجريبي 2</td>
+                                <td class="px-4 py-3 text-gray-600">د. اسمان آخران</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 text-gray-700">37</td>
+                                <td class="px-4 py-3 font-semibold">عنوان مقال نقدي</td>
+                                <td class="px-4 py-3 text-gray-600">أ. اسم الكاتب</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6) الأبحاث الحالية -->
+        <section id="current-issue" class="py-14">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-primary">الأبحاث الحالية</h2>
+                        <p class="text-gray-600">العدد رقم 1 – الإصدار 2025/1</p>
+                    </div>
+                    <a href="#previous-issues" class="text-primary hover:text-golden font-semibold">الأعداد السابقة</a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Paper card -->
+                    <article class="bg-white rounded-xl shadow border overflow-hidden">
+                        <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400">
+                            <i class="fas fa-file-pdf text-4xl"></i>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-1 bg-primary/10 text-primary rounded">العدد 1</span>
+                                <span class="px-2 py-1 bg-golden/20 text-primary rounded">الإصدار 2025/1</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-primary">عنوان البحث العلمي النموذجي</h3>
+                            <p class="text-sm text-gray-600">د. اسم الباحث / الجامعة</p>
+                            <p class="text-gray-700 line-clamp-3" data-abstract>
+                                ملخص: فقرة قصيرة تُعرّف بفكرة البحث ومنهجيته وأبرز نتائجه وإسهاماته.
+                                يمكن تمديد هذا النص لعدة أسطر ليتسع لخلاصة موجزة واضحة.
+                            </p>
+                            <div class="flex items-center gap-3 pt-1">
+                                <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-blue-900">تحميل الملف</a>
+                                <button class="px-4 py-2 border rounded-lg text-sm hover:bg-gray-50" data-toggle-abstract>قراءة المزيد</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Duplicate placeholders -->
+                    <article class="bg-white rounded-xl shadow border overflow-hidden">
+                        <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400">
+                            <i class="fas fa-file-pdf text-4xl"></i>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-1 bg-primary/10 text-primary rounded">العدد 1</span>
+                                <span class="px-2 py-1 bg-golden/20 text-primary rounded">الإصدار 2025/1</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-primary">عنوان بحث آخر</h3>
+                            <p class="text-sm text-gray-600">د. باحث آخر</p>
+                            <p class="text-gray-700 line-clamp-3" data-abstract>
+                                ملخص: نبذة مختصرة عن هذا البحث، تُعرض هنا لإعطاء فكرة عامة قبل تحميل الملف أو قراءة التفاصيل.
+                            </p>
+                            <div class="flex items-center gap-3 pt-1">
+                                <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-blue-900">تحميل الملف</a>
+                                <button class="px-4 py-2 border rounded-lg text-sm hover:bg-gray-50" data-toggle-abstract>قراءة المزيد</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow border overflow-hidden">
+                        <div class="aspect-video bg-gray-100 flex items-center justify-center text-gray-400">
+                            <i class="fas fa-file-pdf text-4xl"></i>
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="px-2 py-1 bg-primary/10 text-primary rounded">العدد 1</span>
+                                <span class="px-2 py-1 bg-golden/20 text-primary rounded">الإصدار 2025/1</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-primary">عنوان بحث ثالث</h3>
+                            <p class="text-sm text-gray-600">د. اسم ثالث</p>
+                            <p class="text-gray-700 line-clamp-3" data-abstract>
+                                ملخص: وصف موجز يسلط الضوء على الإطار العام للبحث ومنهجه ونتائجه.
+                            </p>
+                            <div class="flex items-center gap-3 pt-1">
+                                <a href="#" class="px-4 py-2 bg-primary text-white rounded-lg text-sm hover:bg-blue-900">تحميل الملف</a>
+                                <button class="px-4 py-2 border rounded-lg text-sm hover:bg-gray-50" data-toggle-abstract>قراءة المزيد</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div id="previous-issues" class="mt-8 text-center">
+                    <a href="#" class="inline-flex items-center gap-2 text-primary hover:text-golden font-semibold">
+                        <i class="fas fa-archive"></i>
+                        <span>استعراض الأعداد السابقة</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7) ركن المقالات (اختياري) -->
+        <section id="articles" class="py-14 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">ركن المقالات والقراءات النقدية</h2>
+                    <span class="px-2 py-1 text-xs bg-yellow-100 text-yellow-800 rounded">اختياري</span>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="bg-white rounded-xl shadow border p-5">
+                        <h3 class="font-bold text-lg text-primary">مقال رأي: عنوان تمهيدي</h3>
+                        <p class="text-sm text-gray-600 mb-2">أ. اسم الكاتب</p>
+                        <p class="text-gray-700">نبذة قصيرة عن المقال أو القراءة النقدية، تعرض بإيجاز فكرة المادة ومجالها.</p>
+                        <a href="#" class="inline-block mt-3 text-primary hover:text-golden font-semibold text-sm">قراءة</a>
+                    </article>
+                    <article class="bg-white rounded-xl shadow border p-5">
+                        <h3 class="font-bold text-lg text-primary">مراجعة كتاب: عنوان مختصر</h3>
+                        <p class="text-sm text-gray-600 mb-2">د. اسم المراجع</p>
+                        <p class="text-gray-700">سطران تعريفيان بالكتاب والزاوية النقدية الرئيسة التي يتناولها المقال.</p>
+                        <a href="#" class="inline-block mt-3 text-primary hover:text-golden font-semibold text-sm">قراءة</a>
+                    </article>
+                    <article class="bg-white rounded-xl shadow border p-5">
+                        <h3 class="font-bold text-lg text-primary">قراءة في قضية بحثية معاصرة</h3>
+                        <p class="text-sm text-gray-600 mb-2">باحث مشارك</p>
+                        <p class="text-gray-700">نبذة موجزة تبين خلفية الموضوع وأهم محاوره بحياد ومنهجية.</p>
+                        <a href="#" class="inline-block mt-3 text-primary hover:text-golden font-semibold text-sm">قراءة</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8) أخبار وأنشطة المجلة -->
+        <section id="news" class="py-14">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary">أخبار وأنشطة المجلة</h2>
+                    <a href="#" class="text-primary hover:text-golden font-semibold">دعوة للنشر في العدد القادم</a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="bg-white rounded-xl shadow border p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-lg text-primary">إعلان ندوة علمية</h3>
+                            <span class="text-sm text-gray-500">يناير 2025</span>
+                        </div>
+                        <p class="text-gray-700">تعلن هيئة التحرير عن عقد ندوة حول مناهج البحث المعاصرة بمشاركة نخبة من الباحثين.</p>
+                        <a href="#" class="inline-block mt-3 text-primary hover:text-golden font-semibold text-sm">تفاصيل</a>
+                    </article>
+                    <article class="bg-white rounded-xl shadow border p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-lg text-primary">فتح باب استقبال الأبحاث</h3>
+                            <span class="text-sm text-gray-500">فبراير 2025</span>
+                        </div>
+                        <p class="text-gray-700">تدعو المجلة الباحثين لإرسال أبحاثهم الأصيلة للنشر في الأعداد القادمة وفق تعليمات النشر.</p>
+                        <a href="#" class="inline-block mt-3 text-primary hover:text-golden font-semibold text-sm">تفاصيل</a>
+                    </article>
+                    <article class="bg-white rounded-xl shadow border p-5">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-lg text-primary">مشاركة في مؤتمر علمي</h3>
+                            <span class="text-sm text-gray-500">مارس 2025</span>
+                        </div>
+                        <p class="text-gray-700">تشارك المجلة بجناح تعريفي في مؤتمر الدراسات الإنسانية والاجتماعية.</p>
+                        <a href="#" class="inline-block mt-3 text-primary hover:text-golden font-semibold text-sm">تفاصيل</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9) الغلاف الخلفي -->
+        <section id="back-cover" class="py-14 bg-gray-50 border-t">
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3 mb-3">
+                        <div class="bg-golden text-primary w-12 h-12 rounded-full flex items-center justify-center shadow">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">مجلة وعي للدراسات والبحوث العلمية</h3>
+                            <p class="text-gray-600">أكاديمية المعرفة الدولية</p>
+                        </div>
+                    </div>
+
+                    <div class="text-gray-700 space-y-1">
+                        <p>البريد: journal@knowledge-academy.edu</p>
+                        <p>الموقع: <a href="#" class="text-primary hover:text-golden">www.knowledge-academy.edu/journal</a></p>
+                        <p>الهاتف: +966 11 234 5678</p>
+                    </div>
+
+                    <div class="mt-6 text-gray-500 text-sm">
+                        <p>© 2025 جميع الحقوق محفوظة. النشر وفق ضوابط وأخلاقيات البحث العلمي.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/pages.js"></script>
+    <!-- Utilities -->
+    <button id="toTop" class="fixed bottom-5 left-5 z-40 hidden px-3 py-2 rounded-full bg-primary text-white shadow hover:bg-blue-900">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function(){ showPage('magazine'); });
+        // Show back-to-top button
+        const toTopBtn = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) { toTopBtn.classList.remove('hidden'); }
+            else { toTopBtn.classList.add('hidden'); }
+        });
+        toTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Toggle abstracts
+        document.querySelectorAll('[data-toggle-abstract]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const abstract = btn.closest('article').querySelector('[data-abstract]');
+                if (!abstract) return;
+                abstract.classList.toggle('line-clamp-3');
+                btn.textContent = abstract.classList.contains('line-clamp-3') ? 'قراءة المزيد' : 'إظهار أقل';
+            });
+        });
     </script>
 </body>
 </html>
