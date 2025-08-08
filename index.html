@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أكاديمية المعرفة الدولية للتنمية البشرية والتطوير المعرفي</title>
+    <meta name="description" content="أكاديمية رائدة في التنمية البشرية والتطوير المعرفي، نقدم برامج الماجستير والدكتوراه المهنية والدبلومات في 21 تخصصاً مختلفاً">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        /* Custom colors */
+        :root {
+            --primary-blue: #001f3f;
+            --golden: #FFD700;
+            --white: #FFFFFF;
+        }
+        
+        .bg-primary { background-color: var(--primary-blue); }
+        .bg-golden { background-color: var(--golden); }
+        .text-primary { color: var(--primary-blue); }
+        .text-golden { color: var(--golden); }
+        .border-golden { border-color: var(--golden); }
+        
+        /* Sidebar animation */
+        .sidebar-overlay {
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--golden) transparent;
+        }
+        
+        .sidebar.active {
+            transform: translateX(0);
+        }
+        
+        /* Custom scrollbar for sidebar */
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .sidebar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--golden);
+            border-radius: 3px;
+        }
+        
+        .sidebar::-webkit-scrollbar-thumb:hover {
+            background: #FFA500;
+        }
+        
+        /* Hover effects */
+        .nav-item:hover {
+            background: linear-gradient(135deg, var(--golden), #FFA500);
+            transform: translateX(-5px);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--primary-blue), #1E3A8A);
+        }
+        
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#001f3f',
+                        'golden': '#FFD700',
+                    },
+                    fontFamily: {
+                        'cairo': ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50" dir="rtl">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed top-0 right-0 left-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <div class="bg-golden text-primary p-3 rounded-full">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-primary">أكاديمية المعرفة الدولية</h1>
+                    <p class="text-sm text-gray-600">للتنمية البشرية والتطوير المعرفي</p>
+                </div>
+            </div>
+            
+            <!-- Menu Button -->
+            <button id="menuToggle" class="bg-primary text-white p-3 rounded-lg hover:bg-blue-800 transition-colors">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden sidebar-overlay">
+        <!-- Sidebar -->
+        <div id="sidebar" class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl sidebar z-50">
+            <!-- Sidebar Header -->
+            <div class="bg-primary text-white p-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3 space-x-reverse">
+                        <div class="bg-golden text-primary p-2 rounded-full">
+                            <i class="fas fa-graduation-cap text-lg"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-bold">أكاديمية المعرفة</h2>
+                            <p class="text-sm opacity-90">القائمة الرئيسية</p>
+                        </div>
+                    </div>
+                    <button id="closeSidebar" class="text-white hover:text-golden transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="p-4 pb-6">
+                <!-- الصفحة الرئيسية -->
+                <div class="mb-6">
+                    <a href="#" onclick="showPage('home')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                        <i class="fas fa-home w-5"></i>
+                        <span>الصفحة الرئيسية</span>
+                    </a>
+                </div>
+
+                <!-- عن الأكاديمية -->
+                <div class="mb-6">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">عن الأكاديمية</h3>
+                    <div class="space-y-1">
+                        <a href="#" onclick="showPage('about')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-info-circle w-5"></i>
+                            <span>من نحن</span>
+                        </a>
+                        <a href="#" onclick="showPage('board')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-users w-5"></i>
+                            <span>مجلس الإدارة</span>
+                        </a>
+                        <a href="#" onclick="showPage('faculty')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-chalkboard-teacher w-5"></i>
+                            <span>هيئة التدريس</span>
+                        </a>
+                        <a href="#" onclick="showPage('trainers')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-user-tie w-5"></i>
+                            <span>المدربون المعتمدون</span>
+                        </a>
+                        <a href="#" onclick="showPage('graduates')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-user-graduate w-5"></i>
+                            <span>الخريجون</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- البرامج الأكاديمية -->
+                <div class="mb-6">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">البرامج الأكاديمية</h3>
+                    <div class="space-y-1">
+                        <a href="#" onclick="showPage('departments')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-building w-5"></i>
+                            <span>الأقسام الأكاديمية</span>
+                        </a>
+                        <a href="#" onclick="showPage('programs')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-book w-5"></i>
+                            <span>البرامج التعليمية</span>
+                        </a>
+                        <a href="#" onclick="showPage('education-system')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-cogs w-5"></i>
+                            <span>نظام التعليم</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- القبول والخدمات -->
+                <div class="mb-6">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">القبول والخدمات</h3>
+                    <div class="space-y-1">
+                        <a href="#" onclick="showPage('admission')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-file-alt w-5"></i>
+                            <span>القبول والتسجيل</span>
+                        </a>
+                        <a href="#" onclick="showPage('verification')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-certificate w-5"></i>
+                            <span>التحقق من الشهادات</span>
+                        </a>
+                        <a href="#" onclick="showPage('accreditations')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-award w-5"></i>
+                            <span>الاعتمادات والشراكات</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- المحتوى والنشر -->
+                <div class="mb-6">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">المحتوى والنشر</h3>
+                    <div class="space-y-1">
+                        <a href="#" onclick="showPage('magazine')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-newspaper w-5"></i>
+                            <span>مجلة الأكاديمية</span>
+                        </a>
+                        <a href="#" onclick="showPage('news')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-rss w-5"></i>
+                            <span>المدونة والأخبار</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- المساعدة والدعم -->
+                <div class="mb-6">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 px-3">المساعدة والدعم</h3>
+                    <div class="space-y-1">
+                        <a href="#" onclick="showPage('faq')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-question-circle w-5"></i>
+                            <span>الأسئلة الشائعة</span>
+                        </a>
+                        <a href="#" onclick="showPage('contact')" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-700 hover:text-white transition-all">
+                            <i class="fas fa-envelope w-5"></i>
+                            <span>تواصل معنا</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- شريط فاصل -->
+                <div class="border-t border-gray-200 my-4"></div>
+
+                <!-- روابط إضافية -->
+                <div class="space-y-1">
+                    <a href="#" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-600 hover:text-white transition-all text-sm">
+                        <i class="fas fa-shield-alt w-5"></i>
+                        <span>سياسة الخصوصية</span>
+                    </a>
+                    <a href="#" class="nav-item flex items-center space-x-3 space-x-reverse p-3 rounded-lg text-gray-600 hover:text-white transition-all text-sm">
+                        <i class="fas fa-file-contract w-5"></i>
+                        <span>الشروط والأحكام</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="mt-20">
+        <!-- Content will be loaded here -->
+        <div id="mainContent">
+            <!-- Home page content will be loaded here initially -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-8">
+                <!-- Academy Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="bg-golden text-primary p-3 rounded-full">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-golden">أكاديمية المعرفة الدولية</h3>
+                            <p class="text-sm">للتنمية البشرية والتطوير المعرفي</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        أكاديمية رائدة في مجال التنمية البشرية والتطوير المعرفي، نقدم برامج تعليمية متميزة في 21 تخصصاً مختلفاً، نبني العقول ونطور المستقبل.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-golden hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-golden hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-golden hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-golden hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                        <a href="#" class="text-golden hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- عن الأكاديمية -->
+                <div>
+                    <h4 class="text-lg font-semibold text-golden mb-4">عن الأكاديمية</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('about')" class="text-gray-300 hover:text-golden transition-colors">من نحن</a></li>
+                        <li><a href="#" onclick="showPage('board')" class="text-gray-300 hover:text-golden transition-colors">مجلس الإدارة</a></li>
+                        <li><a href="#" onclick="showPage('faculty')" class="text-gray-300 hover:text-golden transition-colors">هيئة التدريس</a></li>
+                        <li><a href="#" onclick="showPage('trainers')" class="text-gray-300 hover:text-golden transition-colors">المدربون المعتمدون</a></li>
+                        <li><a href="#" onclick="showPage('graduates')" class="text-gray-300 hover:text-golden transition-colors">الخريجون</a></li>
+                    </ul>
+                </div>
+
+                <!-- البرامج الأكاديمية -->
+                <div>
+                    <h4 class="text-lg font-semibold text-golden mb-4">البرامج الأكاديمية</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('departments')" class="text-gray-300 hover:text-golden transition-colors">الأقسام الأكاديمية</a></li>
+                        <li><a href="#" onclick="showPage('programs')" class="text-gray-300 hover:text-golden transition-colors">البرامج التعليمية</a></li>
+                        <li><a href="#" onclick="showPage('education-system')" class="text-gray-300 hover:text-golden transition-colors">نظام التعليم</a></li>
+                        <li><a href="#" onclick="showPage('admission')" class="text-gray-300 hover:text-golden transition-colors">القبول والتسجيل</a></li>
+                    </ul>
+                </div>
+
+                <!-- الخدمات -->
+                <div>
+                    <h4 class="text-lg font-semibold text-golden mb-4">الخدمات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" onclick="showPage('verification')" class="text-gray-300 hover:text-golden transition-colors">التحقق من الشهادات</a></li>
+                        <li><a href="#" onclick="showPage('accreditations')" class="text-gray-300 hover:text-golden transition-colors">الاعتمادات والشراكات</a></li>
+                        <li><a href="#" onclick="showPage('magazine')" class="text-gray-300 hover:text-golden transition-colors">مجلة الأكاديمية</a></li>
+                        <li><a href="#" onclick="showPage('news')" class="text-gray-300 hover:text-golden transition-colors">المدونة والأخبار</a></li>
+                    </ul>
+                </div>
+                
+                <!-- الدعم والتواصل -->
+                <div>
+                    <h4 class="text-lg font-semibold text-golden mb-4">الدعم والتواصل</h4>
+                    <ul class="space-y-2 mb-4">
+                        <li><a href="#" onclick="showPage('faq')" class="text-gray-300 hover:text-golden transition-colors">الأسئلة الشائعة</a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="text-gray-300 hover:text-golden transition-colors">تواصل معنا</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-golden transition-colors">سياسة الخصوصية</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-golden transition-colors">الشروط والأحكام</a></li>
+                    </ul>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2 space-x-reverse">
+                            <i class="fas fa-envelope text-golden text-sm"></i>
+                            <span class="text-gray-300 text-sm">info@knowledge-academy.edu</span>
+                        </div>
+                        <div class="flex items-center space-x-2 space-x-reverse">
+                            <i class="fas fa-phone text-golden text-sm"></i>
+                            <span class="text-gray-300 text-sm">+966 11 234 5678</span>
+                        </div>
+                        <div class="flex items-center space-x-2 space-x-reverse">
+                            <i class="fas fa-map-marker-alt text-golden text-sm"></i>
+                            <span class="text-gray-300 text-sm">الرياض، المملكة العربية السعودية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Links Bar -->
+            <div class="border-t border-gray-600 mt-8 pt-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center md:text-right">
+                        <h5 class="text-golden font-semibold mb-2">روابط مفيدة</h5>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 text-sm">
+                            <a href="#" class="text-gray-300 hover:text-golden transition-colors">خريطة الموقع</a>
+                            <a href="#" class="text-gray-300 hover:text-golden transition-colors">البحث</a>
+                            <a href="#" class="text-gray-300 hover:text-golden transition-colors">المساعدة</a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h5 class="text-golden font-semibold mb-2">التطبيقات</h5>
+                        <div class="flex justify-center space-x-4 space-x-reverse">
+                            <a href="#" class="text-gray-300 hover:text-golden transition-colors">
+                                <i class="fab fa-apple text-lg"></i>
+                            </a>
+                            <a href="#" class="text-gray-300 hover:text-golden transition-colors">
+                                <i class="fab fa-google-play text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h5 class="text-golden font-semibold mb-2">اللغات</h5>
+                        <div class="flex justify-center md:justify-end space-x-3 space-x-reverse text-sm">
+                            <a href="#" class="text-golden font-semibold">العربية</a>
+                            <a href="#" class="text-gray-300 hover:text-golden transition-colors">English</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    © 2024 أكاديمية المعرفة الدولية للتنمية البشرية والتطوير المعرفي. جميع الحقوق محفوظة.
+                </p>
+                <p class="text-gray-400 text-sm mt-2">
+                    تم التطوير بواسطة فريق أكاديمية المعرفة التقني
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/pages.js"></script>
+</body>
+</html>
