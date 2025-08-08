@@ -229,7 +229,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
                             <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow">
-                                <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=320&auto=format&fit=crop" alt="Chairman portrait" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=320&auto=format&fit=crop" alt="د. محمد أحمد الأمين - رئيس مجلس الإدارة" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold">د. محمد أحمد الأمين</h3>
                             <p class="text-golden">رئيس مجلس الإدارة</p>
@@ -244,7 +244,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
                             <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white/80 shadow">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=320&auto=format&fit=crop" alt="Vice Chair portrait" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=320&auto=format&fit=crop" alt="د. فاطمة علي السالم - نائب رئيس المجلس" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold">د. فاطمة علي السالم</h3>
                             <p class="text-primary">نائب رئيس المجلس</p>
@@ -259,7 +259,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
                             <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white/80 shadow">
-                                <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=320&auto=format&fit=crop" alt="Human Development Trainer" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=320&auto=format&fit=crop" alt="د. عبدالله محمد النجار - مدير الشؤون الأكاديمية" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold">د. عبدالله محمد النجار</h3>
                             <p class="text-golden">مدير الشؤون الأكاديمية</p>
@@ -356,7 +356,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
                             <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow">
-                                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=320&auto=format&fit=crop" alt="Professor portrait" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=320&auto=format&fit=crop" alt="د. أميرة محمد حسن - أستاذ علم النفس" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold">د. أميرة محمد حسن</h3>
                             <p class="text-golden">أستاذ علم النفس</p>
@@ -383,7 +383,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
                             <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white shadow">
-                                <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=320&auto=format&fit=crop" alt="Professor portrait" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=320&auto=format&fit=crop" alt="د. خالد عبدالله النجار - أستاذ إدارة الأعمال" class="w-full h-full object-cover">
                             </div>
                             <h3 class="text-xl font-bold">د. خالد عبدالله النجار</h3>
                             <p class="text-primary">أستاذ إدارة الأعمال</p>
