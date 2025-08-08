@@ -2869,43 +2869,52 @@ function loadMagazinePage() {
         <section class="py-16 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
-                    <h1 class="text-4xl font-bold text-primary mb-4">مجلة الأكاديمية</h1>
+                    <h1 class="text-4xl font-bold text-primary mb-4">مجلة وعي للدراسات والبحوث العلمية</h1>
                     <div class="w-24 h-1 bg-golden mx-auto mb-6"></div>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        مجلة علمية محكمة تنشر أحدث البحوث والدراسات في مجالات التنمية البشرية والتطوير المعرفي
+                        مجلة علمية محكمة تصدر عن أكاديمية المعرفة الدولية
                     </p>
                 </div>
 
-                <!-- Latest Issue -->
+                <!-- Cover Page (غلاف) -->
                 <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-primary text-center mb-12">العدد الأحدث</h2>
-                    <div class="bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg p-8">
+                    <div class="bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg p-10">
                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <div>
-                                <div class="bg-golden text-primary p-3 rounded-lg inline-block mb-4">
-                                    <span class="font-bold">العدد 45 - ديسمبر 2024</span>
+                                <div class="flex items-center justify-center lg:justify-start gap-4 mb-6">
+                                    <div class="bg-golden text-primary p-4 rounded-full w-16 h-16 flex items-center justify-center">
+                                        <i class="fas fa-book-open text-2xl"></i>
+                                    </div>
+                                    <div class="text-right">
+                                        <h2 class="text-3xl font-extrabold">مجلة وعي للدراسات والبحوث العلمية</h2>
+                                        <p class="text-gray-200">أكاديمية المعرفة الدولية</p>
+                                    </div>
                                 </div>
-                                <h3 class="text-3xl font-bold mb-4">التعليم الرقمي: الواقع والمستقبل</h3>
-                                <p class="text-lg mb-6 leading-relaxed">
-                                    يستكشف هذا العدد تحديات وفرص التعليم الرقمي في العصر الحديث، ويقدم رؤى متقدمة 
-                                    لتطوير استراتيجيات التعلم الإلكتروني الفعال.
-                                </p>
-                                <div class="flex space-x-4 space-x-reverse">
+                                <div class="bg-white/10 rounded-lg p-4 inline-block mb-4">
+                                    <span class="font-bold">العدد 45 | السنة 2024 | ديسمبر 2024</span>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-200 mb-6">
+                                    <div>ISSN (Online): 2789-1234</div>
+                                    <div>ISSN (Print): 2789-5678</div>
+                                    <div>لغة النشر: العربية والإنجليزية</div>
+                                    <div>دورية الصدور: ربع سنوية</div>
+                                </div>
+                                <div class="flex flex-wrap gap-4">
                                     <button class="bg-golden text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
                                         <i class="fas fa-download ml-2"></i>
                                         تحميل العدد PDF
                                     </button>
-                                    <button class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                                        <i class="fas fa-eye ml-2"></i>
-                                        تصفح العدد
+                                    <button onclick="showPage('magazine-inner')" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                                        <i class="fas fa-door-open ml-2"></i>
+                                        دخول إلى الصفحة الداخلية
                                     </button>
                                 </div>
                             </div>
                             <div class="text-center">
                                 <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
-                                    <div class="bg-gray-200 w-48 h-64 rounded-lg flex items-center justify-center">
+                                    <div class="bg-gray-200 w-56 h-80 rounded-lg flex items-center justify-center">
                                         <div class="text-center text-gray-600">
-                                            <i class="fas fa-book text-6xl mb-4"></i>
+                                            <i class="fas fa-book text-7xl mb-4"></i>
                                             <p class="text-lg font-semibold">غلاف المجلة</p>
                                         </div>
                                     </div>
@@ -2915,53 +2924,7 @@ function loadMagazinePage() {
                     </div>
                 </div>
 
-                <!-- Research Articles -->
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-primary text-center mb-12">المقالات البحثية</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                            <div class="bg-primary text-white p-6">
-                                <h3 class="text-xl font-bold mb-2">أثر التكنولوجيا على التعلم</h3>
-                                <p class="text-gray-200 text-sm">د. أحمد محمد السالم</p>
-                            </div>
-                            <div class="p-6">
-                                <p class="text-gray-600 mb-4">دراسة تحليلية لتأثير التقنيات الحديثة على فعالية العملية التعليمية...</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-500">15 صفحة</span>
-                                    <button class="text-primary hover:text-blue-800 font-semibold">قراءة المزيد</button>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                            <div class="bg-golden text-primary p-6">
-                                <h3 class="text-xl font-bold mb-2">استراتيجيات التنمية البشرية</h3>
-                                <p class="text-primary opacity-90 text-sm">د. فاطمة عبدالله النجار</p>
-                            </div>
-                            <div class="p-6">
-                                <p class="text-gray-600 mb-4">نظرة معاصرة على أساليب تطوير المهارات البشرية في بيئة العمل...</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-500">22 صفحة</span>
-                                    <button class="text-primary hover:text-blue-800 font-semibold">قراءة المزيد</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                            <div class="bg-primary text-white p-6">
-                                <h3 class="text-xl font-bold mb-2">القيادة في العصر الرقمي</h3>
-                                <p class="text-gray-200 text-sm">أ. خالد سعد المطيري</p>
-                            </div>
-                            <div class="p-6">
-                                <p class="text-gray-600 mb-4">تحليل لمتطلبات القيادة الفعالة في ظل التحول الرقمي المعاصر...</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-500">18 صفحة</span>
-                                    <button class="text-primary hover:text-blue-800 font-semibold">قراءة المزيد</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Previous Issues -->
                 <div class="mb-16">
@@ -3020,6 +2983,241 @@ function loadMagazinePage() {
                             <i class="fas fa-upload ml-2"></i>
                             إرسال بحث للنشر
                         </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function loadMagazineInnerPage() {
+    const mainContent = document.getElementById('mainContent');
+    mainContent.innerHTML = `
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center gap-3">
+                        <button onclick=\"showPage('magazine')\" class="inline-flex items-center gap-2 text-primary hover:text-blue-800 font-semibold">
+                            <i class="fas fa-arrow-right"></i>
+                            العودة إلى الغلاف
+                        </button>
+                    </div>
+                    <div class="text-right">
+                        <h1 class="text-3xl font-bold text-primary">الصفحة الداخلية للمجلة</h1>
+                        <p class="text-gray-600">مجلة وعي للدراسات والبحوث العلمية</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-8 mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-4">عن المجلة</h2>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        مجلة وعي للدراسات والبحوث العلمية هي مجلة علمية محكّمة تصدر عن أكاديمية المعرفة الدولية، تُعنى بنشر الأبحاث الأصيلة في مجالات التنمية البشرية والتربية والتعليم والإدارة والعلوم الإنسانية.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="font-bold text-primary mb-2">رسالتنا</h3>
+                            <p class="text-gray-700 text-sm">تعزيز نشر المعرفة العلمية الرصينة وإتاحة منصة موثوقة للباحثين لنشر نتاجهم العلمي.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="font-bold text-primary mb-2">أهدافنا</h3>
+                            <ul class="text-gray-700 text-sm list-disc pr-5 space-y-1">
+                                <li>نشر الأبحاث الأصيلة ذات القيمة المضافة.</li>
+                                <li>تعزيز التبادل العلمي بين الباحثين.</li>
+                                <li>الالتزام بالتحكيم العلمي الرصين.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <h3 class="font-bold text-primary mb-2">مجالات النشر</h3>
+                            <p class="text-gray-700 text-sm">التنمية البشرية، التربية، علم النفس، الإدارة، القانون، والعلوم الاجتماعية.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 text-sm text-gray-700">
+                        <div class="bg-white p-5 rounded-lg border">
+                            <span class="font-semibold text-primary">لغة النشر:</span>
+                            <div>العربية والإنجليزية</div>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border">
+                            <span class="font-semibold text-primary">دورية الصدور:</span>
+                            <div>ربع سنوية</div>
+                        </div>
+                        <div class="bg-white p-5 rounded-lg border">
+                            <span class="font-semibold text-primary">بيانات التواصل:</span>
+                            <div>journal@knowledge-academy.edu | www.knowledge-academy.edu | +966 11 234 5678</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-6">هيئة التحرير</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fas fa-user-tie text-primary"></i>
+                                <h3 class="font-bold">رئيس التحرير</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm">د. محمد أحمد الأمين – دكتوراه إدارة الأعمال – السعودية</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fas fa-user text-primary"></i>
+                                <h3 class="font-bold">نائب رئيس التحرير</h3>
+                            </div>
+                            <p class="text-gray-700 text-sm">د. فاطمة علي السالم – دكتوراه التربية – السعودية</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fas fa-users text-primary"></i>
+                                <h3 class="font-bold">أعضاء هيئة التحرير</h3>
+                            </div>
+                            <ul class="text-gray-700 text-sm list-disc pr-5 space-y-1">
+                                <li>د. عبدالله محمد النجار – الهندسة الصناعية – السعودية</li>
+                                <li>أ. سارة خالد المطيري – المالية – السعودية</li>
+                                <li>م. أحمد عبدالله العتيبي – تقنية المعلومات – السعودية</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 mt-6">
+                        <h3 class="font-bold text-primary mb-3">اللجنة العلمية / المحكمون</h3>
+                        <p class="text-gray-700 text-sm">تضم نخبة من الأساتذة المتخصصين من عدة دول عربية وأجنبية، ويتم التحكيم بطريقة مزدوجة وسرية.</p>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-6">تعليمات النشر</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <h3 class="font-bold text-primary mb-3">شروط قبول الأبحاث</h3>
+                            <ul class="text-gray-700 text-sm list-disc pr-5 space-y-1">
+                                <li>أصالة البحث وعدم نشره سابقاً.</li>
+                                <li>اتباع المنهجية العلمية.</li>
+                                <li>سلامة اللغة ودقة التوثيق.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <h3 class="font-bold text-primary mb-3">إجراءات التحكيم والسياسات</h3>
+                            <ul class="text-gray-700 text-sm list-disc pr-5 space-y-1">
+                                <li>تحكيم مزدوج وسري.</li>
+                                <li>سياسات السرية وحقوق النشر والاستلال العلمي.</li>
+                                <li>رسوم النشر (إن وجدت) تُحدد حسب نوع البحث.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-6">فهرس المحتويات</h2>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center justify-between bg-white p-4 rounded border">
+                                <div>
+                                    <h4 class="font-semibold text-primary">أثر التكنولوجيا على التعلم</h4>
+                                    <p class="text-sm text-gray-600">د. أحمد محمد السالم</p>
+                                </div>
+                                <span class="text-sm text-gray-500">ص 1–15</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-white p-4 rounded border">
+                                <div>
+                                    <h4 class="font-semibold text-primary">استراتيجيات التنمية البشرية</h4>
+                                    <p class="text-sm text-gray-600">د. فاطمة عبدالله النجار</p>
+                                </div>
+                                <span class="text-sm text-gray-500">ص 16–37</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-white p-4 rounded border">
+                                <div>
+                                    <h4 class="font-semibold text-primary">القيادة في العصر الرقمي</h4>
+                                    <p class="text-sm text-gray-600">أ. خالد سعد المطيري</p>
+                                </div>
+                                <span class="text-sm text-gray-500">ص 38–55</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-6">الأبحاث الحالية</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <div class="text-sm text-gray-600 mb-2">الغلاف: العدد 45 | الإصدار ديسمبر 2024</div>
+                            <p class="text-gray-700 text-sm mb-4">ملخص: يستعرض هذا البحث تأثير الأدوات الرقمية على مخرجات التعلم.</p>
+                            <div class="flex gap-3">
+                                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors text-sm">تحميل الملف</button>
+                                <button class="bg-gray-100 text-primary px-4 py-2 rounded hover:bg-gray-200 transition-colors text-sm">تفاصيل البحث</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <div class="text-sm text-gray-600 mb-2">الغلاف: العدد 45 | الإصدار ديسمبر 2024</div>
+                            <p class="text-gray-700 text-sm mb-4">ملخص: مراجعة منهجية لاستراتيجيات التنمية البشرية في المؤسسات.</p>
+                            <div class="flex gap-3">
+                                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors text-sm">تحميل الملف</button>
+                                <button class="bg-gray-100 text-primary px-4 py-2 rounded hover:bg-gray-200 transition-colors text-sm">تفاصيل البحث</button>
+                            </div>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <div class="text-sm text-gray-600 mb-2">الغلاف: العدد 45 | الإصدار ديسمبر 2024</div>
+                            <p class="text-gray-700 text-sm mb-4">ملخص: متطلبات القيادة الرقمية وتأثيرها على الأداء المؤسسي.</p>
+                            <div class="flex gap-3">
+                                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors text-sm">تحميل الملف</button>
+                                <button class="bg-gray-100 text-primary px-4 py-2 rounded hover:bg-gray-200 transition-colors text-sm">تفاصيل البحث</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right mt-4">
+                        <button class="text-primary hover:underline">الأعداد السابقة</button>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-2xl font-bold text-primary">ركن المقالات والقراءات النقدية</h2>
+                        <span class="text-sm text-gray-500">اختياري</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg border">
+                            <h3 class="font-semibold text-primary mb-1">مراجعة كتاب: التعلم المدمج</h3>
+                            <p class="text-sm text-gray-700">قراءة نقدية لأحدث المراجع حول التعلم المدمج وتحديات التطبيق.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border">
+                            <h3 class="font-semibold text-primary mb-1">مقال رأي: مستقبل البحث العلمي</h3>
+                            <p class="text-sm text-gray-700">رؤية حول التحولات القادمة في تمويل ونشر الأبحاث الأكاديمية.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-primary mb-6">أخبار وأنشطة المجلة</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <h3 class="font-semibold text-primary mb-2">دعوة للنشر</h3>
+                            <p class="text-sm text-gray-700">ندعو الباحثين لإرسال أبحاثهم للعدد القادم حتى 30 يناير 2025.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <h3 class="font-semibold text-primary mb-2">ورشة تحكيم علمي</h3>
+                            <p class="text-sm text-gray-700">تنظيم ورشة عمل للمحكمين حول أفضل ممارسات التحكيم.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border">
+                            <h3 class="font-semibold text-primary mb-2">مؤتمر متخصص</h3>
+                            <p class="text-sm text-gray-700">المشاركة في مؤتمر التعليم الرقمي 2025 ببحث محكّم.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-primary text-white rounded-lg p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">مجلة وعي للدراسات والبحوث العلمية</h3>
+                            <p class="text-gray-200">تصدر عن أكاديمية المعرفة الدولية</p>
+                            <div class="mt-4 text-sm">
+                                <div>البريد: journal@knowledge-academy.edu</div>
+                                <div>الموقع: www.knowledge-academy.edu/journal</div>
+                                <div>الهاتف: +966 11 234 5678</div>
+                            </div>
+                        </div>
+                        <div class="text-left">
+                            <a href="#" class="inline-flex items-center gap-2 bg-golden text-primary px-5 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
+                                <i class="fas fa-globe"></i>
+                                زيارة الموقع الإلكتروني
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

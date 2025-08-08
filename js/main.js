@@ -98,6 +98,9 @@ function showPage(pageName) {
             case 'magazine':
                 loadMagazinePage();
                 break;
+            case 'magazine-inner':
+                loadMagazineInnerPage();
+                break;
             case 'news':
                 loadNewsPage();
                 break;
