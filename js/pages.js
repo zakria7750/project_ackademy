@@ -229,7 +229,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
                             <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-tie text-3xl"></i>
+                                <i class="fas fa-crown text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. محمد أحمد الأمين</h3>
                             <p class="text-golden">رئيس مجلس الإدارة</p>
@@ -244,7 +244,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
                             <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-graduate text-3xl"></i>
+                                <i class="fas fa-user-tie text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. فاطمة علي السالم</h3>
                             <p class="text-primary">نائب رئيس المجلس</p>
@@ -259,7 +259,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
                             <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-chalkboard-teacher text-3xl"></i>
+                                <i class="fas fa-chalkboard-user text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. عبدالله محمد النجار</h3>
                             <p class="text-golden">مدير الشؤون الأكاديمية</p>
@@ -274,7 +274,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
                             <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-calculator text-3xl"></i>
+                                <i class="fas fa-sack-dollar text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">أ. سارة خالد المطيري</h3>
                             <p class="text-primary">مدير الشؤون المالية</p>
@@ -289,7 +289,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
                             <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-laptop-code text-3xl"></i>
+                                <i class="fas fa-microchip text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">م. أحمد عبدالله العتيبي</h3>
                             <p class="text-golden">مدير تقنية المعلومات</p>
@@ -304,7 +304,7 @@ function loadBoardPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
                             <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-users text-3xl"></i>
+                                <i class="fas fa-user-group text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. نورا فهد الشمري</h3>
                             <p class="text-primary">مدير شؤون الطلاب</p>
@@ -356,7 +356,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
                             <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-graduate text-3xl"></i>
+                                <i class="fas fa-brain text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. أميرة محمد حسن</h3>
                             <p class="text-golden">أستاذ علم النفس</p>
@@ -383,7 +383,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
                             <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-tie text-3xl"></i>
+                                <i class="fas fa-briefcase text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. خالد عبدالله النجار</h3>
                             <p class="text-primary">أستاذ إدارة الأعمال</p>
@@ -410,7 +410,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
                             <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-female text-3xl"></i>
+                                <i class="fas fa-children text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. سلمى أحمد الفهد</h3>
                             <p class="text-golden">أستاذ التربية الخاصة</p>
@@ -437,7 +437,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
                             <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-md text-3xl"></i>
+                                <i class="fas fa-user-doctor text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. محمد علي الشمري</h3>
                             <p class="text-primary">أستاذ الطب النفسي</p>
@@ -464,7 +464,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
                             <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-laptop-code text-3xl"></i>
+                                <i class="fas fa-microchip text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. فهد سعد العتيبي</h3>
                             <p class="text-golden">أستاذ تقنية المعلومات</p>
@@ -491,7 +491,7 @@ function loadFacultyPage() {
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
                             <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-balance-scale text-3xl"></i>
+                                <i class="fas fa-scale-balanced text-3xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">د. نورا خالد المطيري</h3>
                             <p class="text-primary">أستاذ القانون</p>
@@ -566,7 +566,7 @@ function loadTrainersPage() {
                     <div class="bg-primary text-white p-6 rounded-t-lg">
                         <div class="flex items-center justify-center space-x-4 space-x-reverse">
                             <div class="bg-golden text-primary p-3 rounded-full">
-                                <i class="fas fa-users text-2xl"></i>
+                                <i class="fas fa-people-group text-2xl"></i>
                             </div>
                             <h2 class="text-3xl font-bold">مدربو التنمية البشرية</h2>
                         </div>
@@ -577,7 +577,7 @@ function loadTrainersPage() {
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                                 <div class="bg-golden text-primary p-6 text-center">
                                     <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                        <i class="fas fa-chalkboard-teacher text-3xl"></i>
+                                        <i class="fas fa-person-chalkboard text-3xl"></i>
                                     </div>
                                     <h3 class="text-xl font-bold">أ. سامي محمد العنزي</h3>
                                     <p class="text-primary opacity-90">مدرب معتمد في التنمية البشرية</p>
@@ -792,7 +792,7 @@ function loadTrainersPage() {
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                                 <div class="bg-primary text-white p-6 text-center">
                                     <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                        <i class="fas fa-users-cog text-3xl"></i>
+                                        <i class="fas fa-users-gear text-3xl"></i>
                                     </div>
                                     <h3 class="text-xl font-bold">د. أحمد محمد العتيبي</h3>
                                     <p class="text-gray-200">مدرب معتمد في إدارة الموارد البشرية</p>
@@ -892,7 +892,7 @@ function loadGraduatesPage() {
                         <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                             <div class="bg-gradient-to-r from-primary to-blue-600 text-white p-6 text-center">
                                 <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                    <i class="fas fa-user-graduate text-3xl"></i>
+                                    <i class="fas fa-award text-3xl"></i>
                                 </div>
                                 <h3 class="text-xl font-bold">د. سارة محمد الأحمد</h3>
                                 <p class="text-gray-200">دكتوراه في علم النفس - 2023</p>
@@ -1212,7 +1212,7 @@ function loadDepartmentsPage() {
                     <div class="bg-primary text-white p-6 rounded-t-lg">
                         <div class="flex items-center justify-center space-x-4 space-x-reverse">
                             <div class="bg-golden text-primary p-3 rounded-full">
-                                <i class="fas fa-users text-2xl"></i>
+                                <i class="fas fa-people-group text-2xl"></i>
                             </div>
                             <h2 class="text-3xl font-bold">كلية التنمية البشرية</h2>
                         </div>
@@ -1798,7 +1798,7 @@ function loadProgramsPage() {
                         </div>
                         <div class="text-center">
                             <div class="bg-golden text-primary p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-users text-2xl"></i>
+                                <i class="fas fa-people-group text-2xl"></i>
                             </div>
                             <h4 class="font-bold text-primary mb-2">أساتذة متميزون</h4>
                             <p class="text-gray-600 text-sm">نخبة من الخبراء والمتخصصين</p>
