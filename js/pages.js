@@ -228,9 +228,7 @@ function loadBoardPage() {
                     <!-- Chairman -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
-                            <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-crown text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" alt="د. محمد أحمد الأمين" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. محمد أحمد الأمين</h3>
                             <p class="text-golden">رئيس مجلس الإدارة</p>
                         </div>
@@ -243,9 +241,7 @@ function loadBoardPage() {
                     <!-- Vice Chairman -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
-                            <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-tie text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80" alt="د. فاطمة علي السالم" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. فاطمة علي السالم</h3>
                             <p class="text-primary">نائب رئيس المجلس</p>
                         </div>
@@ -258,9 +254,7 @@ function loadBoardPage() {
                     <!-- Academic Affairs Director -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
-                            <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-chalkboard-user text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?auto=format&fit=crop&w=200&q=80" alt="د. عبدالله محمد النجار" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. عبدالله محمد النجار</h3>
                             <p class="text-golden">مدير الشؤون الأكاديمية</p>
                         </div>
@@ -273,9 +267,7 @@ function loadBoardPage() {
                     <!-- Finance Director -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
-                            <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-sack-dollar text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="أ. سارة خالد المطيري" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">أ. سارة خالد المطيري</h3>
                             <p class="text-primary">مدير الشؤون المالية</p>
                         </div>
@@ -288,9 +280,7 @@ function loadBoardPage() {
                     <!-- IT Director -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6">
-                            <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-microchip text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=200&q=80" alt="م. أحمد عبدالله العتيبي" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">م. أحمد عبدالله العتيبي</h3>
                             <p class="text-golden">مدير تقنية المعلومات</p>
                         </div>
@@ -303,9 +293,7 @@ function loadBoardPage() {
                     <!-- Student Affairs Director -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden text-center hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6">
-                            <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-group text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?auto=format&fit=crop&w=200&q=80" alt="د. نورا فهد الشمري" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. نورا فهد الشمري</h3>
                             <p class="text-primary">مدير شؤون الطلاب</p>
                         </div>
@@ -355,9 +343,7 @@ function loadFacultyPage() {
                     <!-- Professor 1 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
-                            <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-brain text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="د. أميرة محمد حسن" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. أميرة محمد حسن</h3>
                             <p class="text-golden">أستاذ علم النفس</p>
                         </div>
@@ -382,9 +368,7 @@ function loadFacultyPage() {
                     <!-- Professor 2 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
-                            <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-briefcase text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="د. خالد عبدالله النجار" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. خالد عبدالله النجار</h3>
                             <p class="text-primary">أستاذ إدارة الأعمال</p>
                         </div>
@@ -409,9 +393,7 @@ function loadFacultyPage() {
                     <!-- Professor 3 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
-                            <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-children text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=200&q=80" alt="د. سلمى أحمد الفهد" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. سلمى أحمد الفهد</h3>
                             <p class="text-golden">أستاذ التربية الخاصة</p>
                         </div>
@@ -436,9 +418,7 @@ function loadFacultyPage() {
                     <!-- Professor 4 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
-                            <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-user-doctor text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=200&q=80" alt="د. محمد علي الشمري" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. محمد علي الشمري</h3>
                             <p class="text-primary">أستاذ الطب النفسي</p>
                         </div>
@@ -463,9 +443,7 @@ function loadFacultyPage() {
                     <!-- Professor 5 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-primary text-white p-6 text-center">
-                            <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-microchip text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80" alt="د. فهد سعد العتيبي" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. فهد سعد العتيبي</h3>
                             <p class="text-golden">أستاذ تقنية المعلومات</p>
                         </div>
@@ -490,9 +468,7 @@ function loadFacultyPage() {
                     <!-- Professor 6 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                         <div class="bg-golden text-primary p-6 text-center">
-                            <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                <i class="fas fa-scale-balanced text-3xl"></i>
-                            </div>
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="د. نورا خالد المطيري" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                             <h3 class="text-xl font-bold">د. نورا خالد المطيري</h3>
                             <p class="text-primary">أستاذ القانون</p>
                         </div>
@@ -576,9 +552,7 @@ function loadTrainersPage() {
                             <!-- Trainer 1 -->
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                                 <div class="bg-golden text-primary p-6 text-center">
-                                    <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                        <i class="fas fa-person-chalkboard text-3xl"></i>
-                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80" alt="أ. سامي محمد العنزي" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                                     <h3 class="text-xl font-bold">أ. سامي محمد العنزي</h3>
                                     <p class="text-primary opacity-90">مدرب معتمد في التنمية البشرية</p>
                                 </div>
@@ -616,9 +590,7 @@ function loadTrainersPage() {
                             <!-- Trainer 2 -->
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                                 <div class="bg-primary text-white p-6 text-center">
-                                    <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                        <i class="fas fa-brain text-3xl"></i>
-                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80" alt="د. منى أحمد الفهد" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                                     <h3 class="text-xl font-bold">د. منى أحمد الفهد</h3>
                                     <p class="text-gray-200">مدربة معتمدة في علم النفس التطبيقي</p>
                                 </div>
@@ -656,9 +628,7 @@ function loadTrainersPage() {
                             <!-- Trainer 3 -->
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                                 <div class="bg-golden text-primary p-6 text-center">
-                                    <div class="bg-primary text-white p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                        <i class="fas fa-lightbulb text-3xl"></i>
-                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="أ. خالد عبدالله النجار" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
                                     <h3 class="text-xl font-bold">أ. خالد عبدالله النجار</h3>
                                     <p class="text-primary opacity-90">مدرب معتمد في الإبداع والابتكار</p>
                                 </div>
@@ -711,11 +681,9 @@ function loadTrainersPage() {
                             <!-- Business Trainer 1 -->
                             <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:transform hover:-translate-y-2 transition-all">
                                 <div class="bg-primary text-white p-6 text-center">
-                                    <div class="bg-golden text-primary p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                        <i class="fas fa-briefcase text-3xl"></i>
-                                    </div>
-                                    <h3 class="text-xl font-bold">أ. فهد سعد المطيري</h3>
-                                    <p class="text-gray-200">مدرب معتمد في إدارة الأعمال</p>
+                                                                         <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=200&q=80" alt="أ. فهد سعد المطيري" class="w-20 h-20 rounded-full object-cover ring-4 ring-white mx-auto mb-4">
+                                     <h3 class="text-xl font-bold">أ. فهد سعد المطيري</h3>
+                                     <p class="text-gray-200">مدرب معتمد في إدارة الأعمال</p>
                                 </div>
                                 <div class="p-6">
                                     <div class="space-y-3 mb-4">
